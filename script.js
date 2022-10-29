@@ -180,7 +180,11 @@ document.querySelector(".sign").addEventListener("click", function(){
 })
 //operation
 function eval (){
-    if (out && last_input_operation) return;
+    if (out && last_input_operation){
+        operation ='';
+        last_input_operation = false;
+        return;
+    }
     if (operation =='+') {
         operation = '';
         value += parseFloat(display.innerHTML);
