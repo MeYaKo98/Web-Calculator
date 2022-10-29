@@ -1,0 +1,256 @@
+:root{
+    --main-body: #969593;
+    --screen-gray: #212121;
+    --screen-container: #050304;
+    --metal-cover: #cdccca;
+    --screen-color: #7e9c80;
+    --num-key: #5a5a5a;
+    --num-key-shadow: #1f1f1f;
+    --operation-key: #ffffff;
+    --operation-key-shadow: #7d7d7a;
+    --clear-key: #faa23e;
+    --clear-key-shadow: #a76d2c;
+    --out-key: #fd1013;
+    --out-key-shadow: #a90709;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+body {
+    background: linear-gradient(45deg, #8460ed, #ff1252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw
+}
+
+.container {
+    height: 600px;
+    width: 600px;
+    background-color: var(--main-body);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+#screen-body {
+    height: 35%;
+    background-color: var(--screen-gray);
+    padding: 1rem;
+}
+
+#screen-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--screen-container);
+    border-radius: 1rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+
+#title {
+    color : var(--operation-key);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: Chakra Petch;
+    font-weight: bold;
+    letter-spacing: 0.35px;
+}
+
+#metal-cover {
+    background-color : var(--metal-cover);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 1rem;
+    flex-grow: 1;
+}
+
+#screen{
+    background-color: var(--screen-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+#result{
+    font-family: Chakra Petch;
+    font-size: 2em;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#buttons{
+    padding: 1rem 1rem 1.5rem 1rem;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "OFF seven eight nine per-cent sqrt"
+    "Music four five six x divide"
+    "CE one two three plus minus"
+    "ON zero point sign plus dollar";
+    grid-gap: 1rem;
+}
+
+.button{
+    display: table;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;    
+}
+
+.button span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.CE{
+    grid-area: CE;
+}
+
+.OFF{
+    grid-area: OFF;
+}
+
+.Music{
+    grid-area: Music;
+}
+
+.ON{
+    grid-area: ON;
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.point{
+    grid-area: point;
+}
+
+.per-cent{
+    grid-area: per-cent;
+}
+
+.minus{
+    grid-area: minus;
+}
+
+.divide{
+    grid-area: divide;
+}
+
+.sqrt{
+    grid-area: sqrt;
+}
+
+.dollar{
+    grid-area: dollar;
+}
+
+.plus{
+    grid-area: plus;
+}
+
+.sign{
+    grid-area: sign;
+}
+
+.X{
+    grid-area: x;
+}
+
+.operation-key{
+    background-color: var(--operation-key);
+    box-shadow: 0 9px var(--operation-key-shadow);
+}
+
+.operation-key:active {
+    box-shadow: 0 5px var(--operation-key-shadow);
+    transform: translateY(4px);
+}
+
+
+.num-key{
+    background-color: var(--num-key);
+    box-shadow: 0 9px var(--num-key-shadow);
+}
+
+.num-key:active {
+    box-shadow: 0 5px var(--num-key-shadow);
+    transform: translateY(4px);
+}
+
+.clear-key{
+    background-color: var(--clear-key);
+    box-shadow: 0 9px var(--clear-key-shadow);
+}
+
+.clear-key:active {
+    box-shadow: 0 5px var(--clear-key-shadow);
+    transform: translateY(4px);
+}
+
+.out-key{
+    background-color: var(--out-key);
+    box-shadow: 0 9px var(--out-key-shadow);
+}
+
+.out-key:active {
+    box-shadow: 0 5px var(--out-key-shadow);
+    transform: translateY(4px);
+}
